@@ -3,7 +3,7 @@ import './cms.css'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 
-import { Template } from '../../templates/example'
+import { Template } from '../templates/example'
 
 class CSSInjector extends React.Component {
   render() {
