@@ -7,7 +7,18 @@ import { Template } from '../templates/example'
 
 class CSSInjector extends React.Component {
   render() {
-    return <div>{React.Children.only(this.props.children)}</div>
+    return (
+      <div
+        ref={ref => {
+          if (ref && !this.css) {
+            this.css = renderToString(this.props.children)
+            ref.ownerDocument.head.innerHTML += this.css
+          }
+        }}
+      >
+        {React.Children.only(this.props.children)}
+      </div>
+    )
   }
 }
 
