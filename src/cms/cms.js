@@ -1,7 +1,7 @@
 import CMS from 'netlify-cms'
 import './cms.css'
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import renderToString from 'react-dom/server'
 
 import { Template } from '../templates/example'
 
